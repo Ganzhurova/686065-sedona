@@ -27,7 +27,61 @@
 			<h1 class="visually-hidden">Выбор гостиницы</h1>
 			<section class="filter">
 				<h2 class="visually-hidden">Фильтр гостиниц</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+				<fieldset>
+					<legend>Инфраструктура:</legend>
+					<ul>
+						<li class="filter-option">
+							<label>
+								<input class="visually-hidden filter-input" type="checkbox" name="pool" checked>
+								Бассейн
+							</label>
+						</li>
+						<li class="filter-option">
+							<label>
+								<input class="visually-hidden filter-input" type="checkbox" name="parking">
+								Парковка
+							</label>
+						</li>
+						<li class="filter-option">
+							<label>
+								<input class="visually-hidden filter-input" type="checkbox" name="wi-fi">
+								wi-fi
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Тип жилья:</legend>
+					<ul>
+						<li class="filter-option">
+							<label>
+								<input class="visually-hidden filter-input" type="checkbox" name="hotel" checked>
+								Гостиница
+							</label>
+						</li>
+						<li class="filter-option">
+							<label>
+								<input class="visually-hidden filter-input" type="checkbox" name="motel" checked>
+								Мотель
+							</label>
+						</li>
+						<li class="filter-option">
+							<label>
+								<input class="visually-hidden filter-input" type="checkbox" name="apartments" checked>
+								Апартаменты
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Стоимость в сутки (р):</legend>
+					<span>от 0</span>
+					<span>до 3000</span>
+					<input type="range">
+				</fieldset>
+					<button class="button filter-button" type="submit">Показать</button>
+				</form>
 			</section>
 			
 			<section class="sort">
@@ -35,27 +89,27 @@
 				<p>Найдено: 3</p>
 				<h3 class="sort-title">Сортировка:</h3>
 				<ul class="sort-list">
-					<li class="sort-current"><span class="button">по цене</span></li>
-					<li><span class="button">по типу</span></li>
-					<li><span class="button">по рейтингу</span></li>
+					<li class="sort-current"><button class="button" type="button">по цене</button></li>
+					<li><button class="button" type="button">по типу</button></li>
+					<li><button class="button" type="button">по рейтингу</button></li>
 				</ul>
 				<ul class="sort-results-list">
-					<li class="sort-results-current"><span class="button">по возрастанию</span></li>
-					<li><span class="button">по убыванию</span></li>
+					<li><input type="image" src="img/icon-up-dir.svg" alt="по возрастанию"></li>
+					<li class="sort-results-current"><input type="image" src="img/icon-down-dir.svg" alt="по убыванию"></li>
 				</ul>
 			</section>
 			
 			<section class="catalog">
 				<h2 class="visually-hidden">Перечень гостиниц</h2>
 				<ul class="catalog-list">
-					<li class="catalog-list">
-						<h3><a href="catalog-item.html">Amara Resort & Spa</a></h3>
-						<div class="catalog-item-image">
-							<a href="catalog-item.html">
+					<li class="catalog-item">
+						<a href="catalog-item.html">
+							<h3>Amara Resort & Spa</h3>
+							<div class="catalog-item-image">
 								<img src="img/hotel-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-							</a>
-						</div>
-						<span class="catalog-category">Гостиница</span>
+							</div>
+							<span class="catalog-category">Гостиница</span>
+						</a>
 						<b class="catalog-item-price">от 4000 р.</b>
 						<a class="catalog-category-button" href="catalog-item.html">Подробнее</a>
 						<a class="catalog-category-button" href="#">Забронировать</a>
@@ -64,14 +118,14 @@
 							<span class="rating-text">Рейтинг: 8,5</span>
 						</div>
 					</li>
-					<li class="catalog-list">
-						<h3><a href="catalog-item.html">Desert Quail Inn</a></h3>
-						<div class="catalog-item-image">
-							<a href="catalog-item.html">
+					<li class="catalog-item">
+						<a href="catalog-item.html">
+							<h3>Desert Quail Inn</h3>
+							<div class="catalog-item-image">
 								<img src="img/hotel-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
-							</a>
-						</div>
-						<span class="catalog-category">Мотель</span>
+							</div>
+							<span class="catalog-category">Мотель</span>
+						</a>
 						<b class="catalog-item-price">от 3000 р.</b>
 						<a class="catalog-category-button" href="catalog-item.html">Подробнее</a>
 						<a class="catalog-category-button" href="#">Забронировать</a>
@@ -80,14 +134,14 @@
 							<span class="rating-text">Рейтинг: 8,9</span>
 						</div>
 					</li>
-					<li class="catalog-list">
-						<h3><a href="catalog-item.html">Villas at Poco Diablo</a></h3>
-						<div class="catalog-item-image">
-							<a href="catalog-item.html">
+					<li class="catalog-item">
+						<a href="catalog-item.html">
+							<h3>Villas at Poco Diablo</h3>
+							<div class="catalog-item-image">
 								<img src="img/hotel-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
-							</a>
-						</div>
-						<span class="catalog-category">Апартаменты</span>
+							</div>
+							<span class="catalog-category">Апартаменты</span>
+						</a>
 						<b class="catalog-item-price">от 2000 р.</b>
 						<a class="catalog-category-button" href="catalog-item.html">Подробнее</a>
 						<a class="catalog-category-button" href="#">Забронировать</a>
@@ -111,8 +165,9 @@
 			</div>
 			<div class="footer-copyright">
 				<b>Website by</b>
-				<img src="img/logo_html.svg" alt="Логотип HTML Academy">
-				<a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/logo_html.svg" width="113" height="39" alt="Логотип HTML Academy">
+				</a>
 			</div>
 		</footer>
 	</body>

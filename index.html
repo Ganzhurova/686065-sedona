@@ -81,7 +81,7 @@
 			<section class="appointment">
 				<h2>Заинтересовались?</h2>
 				<p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				<span class="button">Поиск гостиницы в Седоне</span>
+				<button class="button" type="button">Поиск гостиницы в Седоне</button>
 			</section>
 			
 			<section class="map">
@@ -101,14 +101,41 @@
 			</div>
 			<div class="footer-copyright">
 				<b>Website by</b>
-				<img src="img/logo_html.svg" alt="Логотип HTML Academy">
-				<a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/logo_html.svg" width="113" height="39" alt="Логотип HTML Academy">
+				</a>
 			</div>
 		</footer>
 		
 		<section class="modal-search">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
-      <!-- Здесь будет форма -->
+			<form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+				<p class="order-item">
+					<label>
+						Дата заезда
+						<input type="text" name="arrivaldate" value="24 апреля 2017">
+						<span class="icon"></span>
+					</label>
+				</p>
+				<p class="order-item">
+					<label>
+						Дата выезда
+						<input type="text" name="departuredate" value="4 июля 2017">
+						<span class="icon"></span>
+					</label>
+				</p>
+				<p class="order-item">
+					<label>Взрослые:
+						<input type="text" name="adult" value="2">
+					</label>
+				</p>
+				<p class="order-item">
+					<label>Дети:
+						<input type="text" name="children" value="0">
+					</label>
+				</p>
+				<button class="button" type="submit">Найти</button>
+			</form>
     </section>
   </body>
 </html>
