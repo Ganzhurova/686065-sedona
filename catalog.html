@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона catalog</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
   </head>
 	<body>
 		<header class="main-header">
@@ -80,7 +83,7 @@
 					<span>до 3000</span>
 					<input type="range">
 				</fieldset>
-					<button class="button filter-button" type="submit">Показать</button>
+					<button class="button" type="submit">Показать</button>
 				</form>
 			</section>
 			
@@ -89,13 +92,13 @@
 				<p>Найдено: 3</p>
 				<h3 class="sort-title">Сортировка:</h3>
 				<ul class="sort-list">
-					<li class="sort-current"><button class="button" type="button">по цене</button></li>
-					<li><button class="button" type="button">по типу</button></li>
-					<li><button class="button" type="button">по рейтингу</button></li>
+					<li class="sort-current"><a>по цене</a></li>
+					<li><a href="#">по типу</a></li>
+					<li><a href="#">по рейтингу</a></li>
 				</ul>
 				<ul class="sort-results-list">
-					<li><input type="image" src="img/icon-up-dir.svg" alt="по возрастанию"></li>
-					<li class="sort-results-current"><input type="image" src="img/icon-down-dir.svg" alt="по убыванию"></li>
+					<li><a class="visually-hidden button" href="#">по возрастанию</a></li>
+					<li class="sort-results-current"><a class="visually-hidden button" href="#">по убыванию</a></li>
 				</ul>
 			</section>
 			
@@ -111,8 +114,8 @@
 							<span class="catalog-category">Гостиница</span>
 						</a>
 						<b class="catalog-item-price">от 4000 р.</b>
-						<a class="catalog-category-button" href="catalog-item.html">Подробнее</a>
-						<a class="catalog-category-button" href="#">Забронировать</a>
+						<a class="button button-info" href="catalog-item.html">Подробнее</a>
+						<a class="button button-reserve" href="#">Забронировать</a>
 						<div class="rating">
 							<div class="rating-stars"></div>
 							<span class="rating-text">Рейтинг: 8,5</span>
@@ -127,8 +130,8 @@
 							<span class="catalog-category">Мотель</span>
 						</a>
 						<b class="catalog-item-price">от 3000 р.</b>
-						<a class="catalog-category-button" href="catalog-item.html">Подробнее</a>
-						<a class="catalog-category-button" href="#">Забронировать</a>
+						<a class="button button-info" href="catalog-item.html">Подробнее</a>
+						<a class="button button-reserve" href="#">Забронировать</a>
 						<div class="rating">
 							<div class="rating-stars"></div>
 							<span class="rating-text">Рейтинг: 8,9</span>
@@ -143,8 +146,8 @@
 							<span class="catalog-category">Апартаменты</span>
 						</a>
 						<b class="catalog-item-price">от 2000 р.</b>
-						<a class="catalog-category-button" href="catalog-item.html">Подробнее</a>
-						<a class="catalog-category-button" href="#">Забронировать</a>
+						<a class="button button-info" href="catalog-item.html">Подробнее</a>
+						<a class="button button-reserve" href="#">Забронировать</a>
 						<div class="rating">
 							<div class="rating-stars"></div>
 							<span class="rating-text">Рейтинг: 9,2</span>
@@ -155,7 +158,7 @@
 		</main>
 	
 		<footer class="main-footer">
-			<p>VisitSedona</p>
+			<p class="footer-hashtag">VisitSedona</p>
 			<div class="footer-social">
 				<ul>
 					<li><a class="social-button" href="#">Твиттер</a></li>
