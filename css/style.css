@@ -16,8 +16,26 @@ a {
 	text-decoration: none;
 }
 
+.button {
+	font: inherit;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+}
+
+.button:hover,
+.button:focus {
+	color: #ffffff;
+}
+
+.button:active {
+	color: rgba(255, 255, 255, 0.3);
+}
+ 
 .main-navigation {
-	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
@@ -58,7 +76,6 @@ a {
 }
 
 .features .reason {
-	font-size: 14px;
 	line-height: 26px;
 }
 
@@ -69,7 +86,6 @@ a {
 .features-description-item h3,
 .features-title h3 {
 	font-size: 21px;
-	line-height: 21px;
 	font-weight: bold;
 	color: #000000;
 }
@@ -95,22 +111,14 @@ a {
 }
 
 .appointment-info {
-	font-size: 14px;
 	line-height: 24px;
 }
 
 .appointment .button {
-	font: inherit;
 	font-size: 21px;
 	line-height: 26px;
-	font-weight: bold;
-	text-align: center;
-	color: #ffffff;
-	vertical-align: middle;
-	text-transform: uppercase;
 	
 	background-color: #766357;
-	border: none;
 }
 
 .appointment .button:hover,
@@ -119,7 +127,6 @@ a {
 }
 
 .appointment .button:active {
-	color: rgba(255, 255, 255, 0.3);
 	background-color: #503e33;
 }
 
@@ -127,7 +134,7 @@ a {
 	color: #ffffff;
 	
 	background-color: #566068;
-	background-image: url("/img/filter_background.jpg");
+	background-image: url("../img/filter_background.jpg");
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
@@ -138,7 +145,6 @@ a {
 
 .filter legend {
 	font-size: 16px;
-	line-height: 21px;
 	font-weight: bold;
 }
 
@@ -157,14 +163,7 @@ a {
 }
 
 .filter .button {
-	font: inherit;
-	font-size: 14px;
-	line-height: 21px;
 	font-weight: normal;
-	text-align: center;
-	color: #ffffff;
-	vertical-align: middle;
-	text-transform: uppercase;
 	
 	background-color: transparent;
 	border: 2px solid #ffffff;
@@ -234,10 +233,6 @@ a {
 	border-bottom: 1px solid #e5e5e5;
 }
 
-.catalog-item a {
-	color: #333333;
-}
-
 .catalog-item h3 {
 	font-size: 21px;
 	line-height: 26px;
@@ -254,22 +249,12 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
+.catalog-category {
+	color: #333333;
+}
+
 .catalog-item-price {
 	font-weight: normal;
-}
-
-.catalog-item .button {
-	font-weight: bold;
-	color: #ffffff;
-}
-
-.catalog-item .button:hover,
-.catalog-item .button:focus {
-	color: #ffffff;
-}
-
-.catalog-item .button:active {
-	color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-item .button-info {
@@ -351,7 +336,6 @@ a {
 
 .order-form input {
 	font: inherit;
-	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
@@ -371,17 +355,10 @@ a {
 }
 
 .order-form .button {
-	font: inherit;
 	font-size: 21px;
 	line-height: 26px;
-	font-weight: bold;
-	text-align: center;
-	color: #ffffff;
-	vertical-align: middle;
-	text-transform: uppercase;
 	
 	background-color: #81b3d2;
-	border: none;
 }
 
 .order-form .button:hover,
@@ -390,6 +367,5 @@ a {
 }
 
 .order-form .button:active {
-	color: rgba(255, 255, 255, 0.3);
 	background-color: #5496bd;
 }
