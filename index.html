@@ -9,13 +9,10 @@
   </head>
   <body>
 		<header class="main-header">
-			<div class="header-top">
-				<div class="header-logo">
-					<a>
+				<nav class="main-navigation container">
+					<a class="header-logo">
 						<img src="img/logo.png" width="138" height="70" alt="Логотип Sedona">
 					</a>
-				</div>
-				<nav class="main-navigation">
 					<ul class="site-navigation">
 						<li><a href="info.html">Информация</a></li>
 						<li><a href="presentation.html">Фото и видео</a></li>
@@ -23,7 +20,6 @@
 						<li><a href="catalog.html">Гостиницы</a></li>
 					</ul>
 				</nav>
-			</div>
 			<div class="intro">
 				<img src="img/panorama.jpg" width="1200" height="773" alt="Панорама">
 			</div>
@@ -37,10 +33,14 @@
 				<h2 class="visually-hidden">Преимущества</h2>
 				<p class="reason">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
 				<div class="features-title">
-					<h3>Настоящий городок</h3>
-					<p class="numbering">№1</p>
-					<p class="desc">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-					<img src="img/town_streets.jpg" width="800" height="401" alt="Улицы городка">
+					<div class="text-container">
+						<h3>Настоящий городок</h3>
+						<p class="numbering">№1</p>
+						<p class="desc">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+					</div>
+					<div class="img-container">
+						<img src="img/town_streets.jpg" width="800" height="401" alt="Улицы городка">
+					</div>
 				</div>
 				<ul class="features-description-list">
 					<li class="features-description-item">
@@ -57,10 +57,14 @@
 					</li>
 				</ul>
 				<div class="features-title">
-					<h3>Там есть Мост дьявола</h3>
-					<p class="numbering">№2</p>
-					<p class="desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-					<img src="img/mountains.jpg" width="800" height="400" alt="Мост дьявола">
+					<div class="text-container">
+						<h3>Там есть Мост дьявола</h3>
+						<p class="numbering">№2</p>
+						<p class="desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					</div>
+					<div class="img-container">
+						<img src="img/mountains.jpg" width="800" height="400" alt="Мост дьявола">
+					</div>
 				</div>
 				<ul class="features-description-list">
 					<li class="features-description-item">
@@ -89,7 +93,9 @@
 			
 			<section class="map">
 				<h2 class="visually-hidden">Как до нас добраться</h2>
-				<img src="img/map.jpg" width="1280" height="747" alt="Карта штата">
+				<div class="img-container">
+					<img src="img/map.jpg" width="1280" height="747" alt="Карта штата">
+				</div>
 			</section>
 		</main>
 
