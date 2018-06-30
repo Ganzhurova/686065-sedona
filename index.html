@@ -90,7 +90,49 @@
 			<section class="appointment">
 				<h2>Заинтересовались?</h2>
 				<p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				<button class="button" type="button">Поиск гостиницы в Седоне</button>
+				<button class="button button-search" type="button">Поиск гостиницы в Седоне</button>
+				<section class="modal-search">
+					<h2 class="visually-hidden">Поиск гостиницы</h2>
+					<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+						<p class="search-item container-field-calendar">
+							<label for="search-arrivaldate">
+								Дата заезда:
+							</label>
+							<input type="text" name="arrivaldate" id="search-arrivaldate" value="24 апреля 2017">
+							<button class="calendar-icon" type="button"></button>
+						</p>
+						<p class="search-item container-field-calendar">
+							<label for="search-departuredate">
+								Дата выезда:
+							</label>
+							<input type="text" name="departuredate" id="search-departuredate" value="4 июля 2017">
+							<button class="calendar-icon" type="button"></button>
+						</p>
+						<div class="lodgers-container">
+							<p class="search-item">
+								<label for="search-adult">
+									Взрослые:
+								</label>
+								<span class="lodgers-amount">
+									<button class="lodgers-less" type="button"></button>
+									<input class="lodgers" type="text" name="adult" id="search-adult" value="2">
+									<button class="lodgers-more" type="button"></button>
+								</span>
+							</p>
+							<p class="search-item">
+								<label class="label-for-children" for="search-children">
+									Дети:
+								</label>
+								<span class="lodgers-amount">
+									<button class="lodgers-less" type="button"></button>
+									<input class="lodgers" type="text" name="children" id="search-children" value="0">
+									<button class="lodgers-more" type="button"></button>
+								</span>
+							</p>
+						</div>
+						<button class="button button-search-form" type="submit">Найти</button>
+					</form>
+				</section>
 			</section>
 			
 			<section class="map">
@@ -133,36 +175,5 @@
 				</a>
 			</div>
 		</footer>
-		
-		<section class="modal-search">
-      <h2 class="visually-hidden">Поиск гостиницы</h2>
-			<form class="order-form" action="https://echo.htmlacademy.ru" method="post">
-				<p class="order-item">
-					<label>
-						Дата заезда
-						<input type="text" name="arrivaldate" value="24 апреля 2017">
-						<span class="icon"></span>
-					</label>
-				</p>
-				<p class="order-item">
-					<label>
-						Дата выезда
-						<input type="text" name="departuredate" value="4 июля 2017">
-						<span class="icon"></span>
-					</label>
-				</p>
-				<p class="order-item">
-					<label>Взрослые:
-						<input type="text" name="adult" value="2">
-					</label>
-				</p>
-				<p class="order-item">
-					<label>Дети:
-						<input type="text" name="children" value="0">
-					</label>
-				</p>
-				<button class="button" type="submit">Найти</button>
-			</form>
-    </section>
   </body>
 </html>
