@@ -90,7 +90,7 @@
 			<section class="appointment">
 				<h2>Заинтересовались?</h2>
 				<p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				<button class="button button-search" type="button">Поиск гостиницы в Седоне</button>
+				<a class="button button-search" href="#">Поиск гостиницы в Седоне</a>
 				<section class="modal-search">
 					<h2 class="visually-hidden">Поиск гостиницы</h2>
 					<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -138,6 +138,7 @@
 			<section class="map">
 				<h2 class="visually-hidden">Как до нас добраться</h2>
 				<div class="img-container-map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.8880953883!2d-112.35544173015927!3d34.854373381055396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1530688825661" width="1280" height="747" frameborder="0" style="border:0" allowfullscreen></iframe>
 					<img src="img/map.jpg" width="1280" height="747" alt="Карта штата">
 				</div>
 			</section>
@@ -175,5 +176,73 @@
 				</a>
 			</div>
 		</footer>
+		
+		<script>
+			var link = document.querySelector(".button-search");
+			
+			var popup = document.querySelector(".modal-search");
+			
+			var form = popup.querySelector("form");
+			var arrivaldate = popup.querySelector("[name=arrivaldate]");
+			var departuredate = popup.querySelector("[name=departuredate]");
+			var adult = popup.querySelector("[name=adult]");
+			var children = popup.querySelector("[name=children]");
+			
+			var isStorageSupport = true;
+  		var storageAdult = "";
+			var storageChildren = "";
+  
+			try {
+				storageAdult = localStorage.getItem("adult");
+				storageChildren = localStorage.getItem("children");
+				} catch (err) {
+				isStorageSupport = false;
+  		}
+			
+			link.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				
+				popup.classList.toggle("modal-show");
+				
+						if (storageAdult && storageChildren) {
+							adult.value = storageAdult;
+							children.value = storageChildren;
+						}
+				
+				arrivaldate.focus();
+				popup.classList.remove("modal-error");
+				
+				if (!popup.classList.contains("modal-show")) {
+						popup.classList.add("modal-close");
+				} else {
+						popup.classList.remove("modal-close");
+				}
+  		});
+			
+			form.addEventListener("submit", function (evt) {
+    		if (!arrivaldate.value || !departuredate.value || !adult.value || !children.value) {
+      		evt.preventDefault();
+      		popup.classList.remove("modal-error");
+      		popup.offsetWidth = popup.offsetWidth;
+					popup.classList.add("modal-error");
+				} else {
+					if (isStorageSupport) {
+      			localStorage.setItem("adult", adult.value);
+						localStorage.setItem("children", children.value);
+					}
+				}
+  		});
+			
+			window.addEventListener("keydown", function (evt) {
+				if (evt.keyCode === 27) {
+					evt.preventDefault();
+					if (popup.classList.contains("modal-show")) {
+						popup.classList.remove("modal-show");
+						popup.classList.remove("modal-error");
+					}
+				}
+			});
+		</script>
+		
   </body>
 </html>

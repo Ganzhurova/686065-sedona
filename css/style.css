@@ -405,6 +405,7 @@ input[type="checkbox"].visually-hidden {
 
 .appointment {
 	position: relative;
+	
 	padding: 0 6%;
 }
 
@@ -431,8 +432,9 @@ input[type="checkbox"].visually-hidden {
 
 .appointment .button-search {
 	display: block;
+	width: 508px;
 	margin: 0 auto;
-	padding: 30px 140px;
+	padding: 30px;
 	
 	font-size: 21px;
 	line-height: 26px;
@@ -449,12 +451,58 @@ input[type="checkbox"].visually-hidden {
 	background-color: #503e33;
 }
 
+@keyframes appear {
+	0% {
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+	100% {
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+}
+
+@keyframes appear-reverse {
+	0% {
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+	100% {
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-search {
+	display: none;
+	
 	position: absolute;
 	top: 100%;
 	left: 50%;
 	margin-left: -284px;
-	z-index: 1;
+	z-index: 2;
 	
 	width: 458px;
 	padding: 55px;
@@ -464,6 +512,23 @@ input[type="checkbox"].visually-hidden {
 	background-color: #ffffff;
 	
 	box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-show {
+	display: flex;
+	
+	animation: appear 1s;
+}
+
+.modal-close {
+	display: flex;
+	
+	animation: appear-reverse 1s;
+	animation-fill-mode: forwards;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .search-item {
@@ -536,6 +601,19 @@ input[type="checkbox"].visually-hidden {
 	border: 0;
 	
 	cursor: pointer;
+}
+
+.calendar-icon:hover,
+.calendar-icon:focus {
+	background-image: url("../img/calendar-hover.svg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.calendar-icon:active {
+	background-image: url("../img/calendar-active.svg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
 }
 
 .lodgers-container {
@@ -663,6 +741,15 @@ input[type="checkbox"].visually-hidden {
 	
 	background-color: #cbdda9;
 	overflow: hidden;
+}
+
+.img-container-map iframe {
+  position: absolute;
+  z-index: 1;
+	width: 100%;
+	top: -115px;
+
+  border: none;
 }
 
 .img-container-map img {
@@ -1180,6 +1267,7 @@ input[type="checkbox"].visually-hidden {
 	
 	position: relative;
 	bottom: 120px;
+	z-index: 2;
 }
 
 .main-footer {
