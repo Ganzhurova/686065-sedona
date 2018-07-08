@@ -147,11 +147,11 @@ input[type="checkbox"].visually-hidden {
 	list-style: none;
 }
 
-.site-navigation li {
+.site-navigation-item {
 	width: 22.75%;
 }
 
-.site-navigation li:nth-child(4n+2){
+.site-navigation-item:nth-child(4n+2){
 	margin-right: auto;
 }
 
@@ -171,14 +171,14 @@ input[type="checkbox"].visually-hidden {
 	color: rgba(0, 0, 0, 0.3)
 }
 
-.site-navigation li:nth-child(4n+1) a,
-.site-navigation li:nth-child(4n+2) a {
+.site-navigation-item:nth-child(4n+1) a,
+.site-navigation-item:nth-child(4n+2) a {
 	padding: 15px 10px 15px 0;
 	text-align: left;
 }
 
-.site-navigation li:nth-child(4n+3) a,
-.site-navigation li:nth-child(4n+4) a {
+.site-navigation-item:nth-child(4n+3) a,
+.site-navigation-item:nth-child(4n+4) a {
 	padding: 15px 0 15px 10px;
 	text-align: right;
 }
@@ -609,10 +609,12 @@ input[type="checkbox"].visually-hidden {
 	        box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.15);
 }
 
+.modal-no-js {
+	display: block;
+}
+
 .modal-show {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	display: block;
 	
 	-webkit-animation: appear 1s;
 	
@@ -620,9 +622,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .modal-close {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	display: block;
 	
 	-webkit-animation: appear-reverse 1s;
 	
@@ -1253,6 +1253,7 @@ input[type="checkbox"].visually-hidden {
 
 .sort-results-list li {
   display: inline-block;
+	vertical-align: top;
 }
 
 .sort-results-current {
@@ -1271,6 +1272,7 @@ input[type="checkbox"].visually-hidden {
   border-left-width: 5px;
   border-right-color: transparent;
   border-left-color: transparent;
+	vertical-align: top;
 }
 
 .arrow-up::before {
@@ -1568,16 +1570,16 @@ input[type="checkbox"].visually-hidden {
 	vertical-align: top;
 }
 
-.footer-copyright a path {
+.htmlacademy-logo path {
 	fill: #231f20;
 }
 
-.footer-copyright a:hover path,
-.footer-copyright a:focus path {
+.htmlacademy-logo:hover path,
+.htmlacademy-logo:focus path {
 	fill: #81b3d2;
 }
 
-.footer-copyright a:active path {
+.htmlacademy-logo:active path {
 	fill: #bdbbbc;
 }
 

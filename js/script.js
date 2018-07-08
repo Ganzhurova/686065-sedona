@@ -15,25 +15,27 @@ var storageChildren = "";
 try {
 	storageAdult = localStorage.getItem("adult");
 	storageChildren = localStorage.getItem("children");
-	} catch (err) {
+} catch (err) {
 	isStorageSupport = false;
 }
+
+popup.classList.remove("modal-no-js");
 
 link.addEventListener("click", function (evt) {
 	evt.preventDefault();
 
 	popup.classList.toggle("modal-show");
 
-			if (storageAdult && storageChildren) {
-				adult.value = storageAdult;
-				children.value = storageChildren;
-			}
+	if (storageAdult && storageChildren) {
+		adult.value = storageAdult;
+		children.value = storageChildren;
+	}
 
 	arrivaldate.focus();
 	popup.classList.remove("modal-error");
 
 	if (!popup.classList.contains("modal-show")) {
-			popup.classList.add("modal-close");
+		popup.classList.add("modal-close");
 	} else {
 			popup.classList.remove("modal-close");
 	}
